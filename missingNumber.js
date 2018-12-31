@@ -10,10 +10,9 @@
  */
 
 const missingNums = (arr) => {
-	return arr.sort((a, b) => a - b).reduce((a, b, index) => { 
-        return arr.indexOf(b-1) == -1 ? b-1 : a });
+	return ((arr.length + 1) * (arr.length + 2) / 2) - arr.reduce((a, b) => a + b);
 }
 
-const arr = [1, 2, 3, 4, 6, 7, 8, 9, 10];
+const arr = [7, 2, 3, 6, 5, 9, 1, 4, 8];
 
 console.log(missingNums(arr));
