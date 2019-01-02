@@ -26,3 +26,33 @@ const head = "on";
 const body = "mato";
 const tail = "ia";
 console.log(verifySubstrs(mainStr, head, body, tail));
+
+/*********************************************************************************************/
+
+/**
+ * Title - X's and O's
+ * 
+ * Description - Create a function that takes a string, 
+ *               checks if it has the same number of 'x's and 'o's 
+ *               and returns either true or false.
+ *               Return a boolean value (true or false).
+ *               The string can contain any character.
+ *               When neither an x nor an o is in the string, return true.
+ * 
+ * Example - "ooxx" ➞ true
+ *           "xooxx" ➞ false
+ *           "ooxXm" ➞ true (case insensitive)
+ *           "zpzpzpp" ➞ true (returns true if no x and o)
+ *           "zzoo" ➞ false
+ * 
+ * Notes - Remember to return true if there aren't any x's or o's.
+ *         Must be case insensitive.
+ */
+
+const XO = (str) => {
+    return str.toLowerCase().split("x").length == str.split("o").length;
+}
+
+const str = "ooxxx";
+
+console.log(XO(str));
