@@ -18,7 +18,7 @@
  */
 
 const verifySubstrs = (mainStr, head, body, tail) => {
-	return mainStr.startsWith(head) && mainStr.endsWith(tail) && mainStr.includes(body) ? "My head, body, and tail." : "Incomplete."; 
+    return mainStr.startsWith(head) && mainStr.endsWith(tail) && mainStr.includes(body) ? "My head, body, and tail." : "Incomplete.";
 };
 
 const mainStr = "Onomatopeia";
@@ -74,7 +74,7 @@ console.log(XO(str));
  */
 
 function isSymmetrical(num) {
-	return num.toString().split('').reverse().join('') == num
+    return num.toString().split('').reverse().join('') == num
 }
 
 const num = "ooxxx";
@@ -98,8 +98,18 @@ console.log(isSymmetrical(num));
  */
 
 const hackerSpeak = (str) => {
-    const str1 = str.split('');
-    str1.map(ele => console.log(ele));
+    const replaceObj = {
+        a: 4,
+        e: 3,
+        i: 1,
+        o: 0,
+        s: 5
+    };
+    const regex = /[aeios]/g;
+
+    return str.replace(regex, match => {
+        return replaceObj[match];
+    });
 };
 
 const string = "javascript is cool";
