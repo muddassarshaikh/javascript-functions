@@ -56,3 +56,52 @@ const XO = (str) => {
 const str = "ooxxx";
 
 console.log(XO(str));
+
+/*******************************************************************************************/
+
+/**
+ * Title - Is the Number Symmetrical?
+ * 
+ * Description - Create a function that takes a number as an argument and 
+ *               returns true or false depending on whether the number is symmetrical or not. 
+ *               A number is symmetrical when it is the same as its reverse.
+ * 
+ * Example - isSymmetrical(7227) ➞ true
+ *           isSymmetrical(12567) ➞ false
+ *           isSymmetrical(44444444) ➞ true
+ *           isSymmetrical(9939) ➞ false
+ *           isSymmetrical(1112111) ➞ true
+ */
+
+function isSymmetrical(num) {
+	return num.toString().split('').reverse().join('') == num
+}
+
+const num = "ooxxx";
+
+console.log(isSymmetrical(num));
+
+/*******************************************************************************************/
+
+/**
+ * Title - H4ck3r Sp34k
+ * 
+ * Description - Create a function that takes a string as an argument and 
+ *               returns a coded (h4ck3r 5p34k) version of the string.
+ * 
+ * Example - hackerSpeak("javascript is cool") ➞ "j4v45cr1pt 15 c00l"
+ *           hackerSpeak("programming is fun") ➞ "pr0gr4mm1ng 15 fun"
+ *           hackerSpeak("become a coder") ➞ "b3c0m3 4 c0d3r"
+ * 
+ * Note - In order to work properly, the function should replace all 'a's with 4, 
+ *        'e's with 3, 'i's with 1, 'o's with 0, and 's's with 5.
+ */
+
+const hackerSpeak = (str) => {
+    const str1 = str.split('');
+    str1.map(ele => console.log(ele));
+};
+
+const string = "javascript is cool";
+
+console.log(hackerSpeak(string));
