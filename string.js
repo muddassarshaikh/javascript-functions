@@ -115,3 +115,32 @@ const hackerSpeak = (str) => {
 const string = "javascript is cool";
 
 console.log(hackerSpeak(string));
+
+/*******************************************************************************************/
+
+/**
+ * Title - Capitalize the Names
+ * 
+ * Description - Create a function that takes an array of names and 
+ *               returns an array with the first letter capitalized.
+ * 
+ * Example - ["mavis", "senaida", "letty"] ➞ ["Mavis", "Senaida", "Letty"]
+ *           ["samuel", "MABELLE", "letitia", "meridith"] ➞ ["Samuel", "Mabelle", "Letitia", "Meridith"]
+ *           ["Slyvia", "Kristal", "Sharilyn", "Calista"] ➞ ["Slyvia", "Kristal", "Sharilyn", "Calista"]
+ * 
+ * Note - Don't change the order of the original array.
+ *        Notice in the second example above, "MABELLE" is returned as "Mabelle".
+ */
+
+const capMe = (arr) => {
+	return arr.map(ele => ele.charAt(0).toUpperCase() + ele.substr(1).toLowerCase());
+}
+
+const arr = ["mavis", "senaida", "letty"];
+
+console.log(capMe(arr));
+
+
+
+
+
