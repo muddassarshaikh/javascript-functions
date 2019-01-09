@@ -140,7 +140,71 @@ const arr = ["mavis", "senaida", "letty"];
 
 console.log(capMe(arr));
 
+/*******************************************************************************************/
 
+/**
+ * Title - Remove the Special Characters from a String
+ * 
+ * Description - Create a function that takes a string, removes all "special" characters 
+ *               (e.g. ! @ # $ % ^ & \ *) and returns the new string. The only 
+ *               non-alphanumeric characters allowed are dashes -, underscores _ and spaces.
+ * 
+ * Example - "The quick brown fox!" ➞ "The quick brown fox"
+ *           "%fd76$fd(-)6GvKlO." ➞ "fd76fd-6GvKlO"
+ *           "D0n$c sed 0di0 du1" ➞ "D0nc sed 0di0 du1"
+ */
 
+const removeSpecialCharacters = (str) => {
+	return str.replace(/[^a-zA-Z0-9-_ ]/g, "");
+};
 
+function removeSpecialCharacters(str) {
+    return str.replace(/[^\w- ]/gi, "");
+}
 
+const str2 = "The quick brown fox!";
+
+console.log(removeSpecialCharacters(str2));
+
+/*******************************************************************************************/
+
+/**
+ * Title - AlTeRnAtInG CaPs​​​​​
+ * 
+ * Description - Create a function that alternates the case of the characters in a string.
+ * 
+ * Example - "Hello" ➞ "HeLlO"
+ *           "Hey, how are you?" ➞ "HeY, hOw aRe yOu?"
+ *           "OMG!!! This website is awesome!!" ➞ "OmG!!! tHiS WeBsItE Is aWeSoMe!!"
+ */
+
+function alternatingCaps(str) {
+	return str.split('').map((ele, index) => index%2 == 0 ? ele.toUpperCase() : ele.toLowerCase()).join('')
+}
+
+const str3 = "The quick brown fox!";
+
+console.log(alternatingCaps(str3));
+
+/*********************************************************************************************************************************/
+
+/**
+ * Title - Sort an Array by String Length
+ * 
+ * Description - Create a function that takes an array of strings and return an array, sorted from shortest to longest.
+ * 
+ * Example - sortByLength(["Google", "Apple", "Microsoft"]) ➞ ["Apple", "Google", "Microsoft"]
+ *           sortByLength(["Leonardo", "Michelangelo", "Raphael", "Donatello"]) ➞ ["Raphael", "Leonardo", "Donatello", "Michelangelo"]
+ *           sortByLength(["Turing", "Einstein", "Jung"]) ➞ ["Jung", "Turing", "Einstein"]
+ * 
+ * Note - All test cases contain arrays with strings of different lengths, 
+ *        so you won't have to deal with multiple strings of the same length.
+ */
+
+function sortByLength(arr) {
+	return arr.sort((a, b) => a.length - b.length)
+}
+
+const arr = ["Google", "Apple", "Microsoft"];
+
+console.log(sortByLength(arr));
