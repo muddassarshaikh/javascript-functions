@@ -26,4 +26,10 @@ function validateEmail(str) {
   	return re.test(str);
 }
 
+function validateEmail(str) {
+    return /.+@.+\..+/.test(str);
+}
+
+
+
 console.log(validateEmail("@gmail.com"));
