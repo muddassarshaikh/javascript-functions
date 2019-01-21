@@ -255,3 +255,52 @@ function validatePIN(pin) {
 }
 
 console.log(validatePIN("1234"));
+
+/*********************************************************************************************************************************/
+
+/**
+ * Title - Capitalize the First Letter of Each Word
+ * 
+ * Description - Create a function that takes a string as an argument and 
+ *               converts the first character of each word to uppercase. Return the newly formatted string.
+ * 
+ * Example - makeTitle("This is a title") ➞ "This Is A Title"
+ *           makeTitle("capitalize every word") ➞ "Capitalize Every Word"
+ *           makeTitle("I Like Pizza") ➞ "I Like Pizza"
+ *           makeTitle("PIZZA PIZZA PIZZA") ➞ "PIZZA PIZZA PIZZA"
+ * 
+ * Note - You can expect a valid string for each test case.
+ */
+
+function makeTitle(str) {
+    return str.split(' ').map(x => x.charAt(0).toUpperCase() + x.substring(1) ).join(' ')
+}
+
+console.log(makeTitle("capitalize every word"));
+
+/*********************************************************************************************************************************/
+
+/**
+ * Title - Reverse the Order of Words with Five Letters or More
+ * 
+ * Description - Write a function that takes a string of one or more words as an argument and 
+ *               returns the same string, but with all five or more letter words reversed. 
+ *               Strings passed in will consist of only letters and spaces. 
+ *               Spaces will be included only when more than one word is present.
+ * 
+ * Example - reverse("Reverse") ➞ "esreveR"
+ *           reverse("This is a typical sentence.") ➞ "This is a lacipyt .ecnetnes"
+ *           reverse("The dog is big.") ➞ "The dog is big."
+ * 
+ * Note - You can expect a valid string to be provided for each test case.
+ */
+
+function reverse(str) {
+	return str.split(' ').map(x => x.length > 4 ? x.split('').reverse().join('') : x).join(' ')
+}
+
+console.log(reverse("capitalize every word"));
+
+
+
+
