@@ -5,7 +5,7 @@
 const oldStartTime = "08:00";
 const oldEndTime = "12:30";
 
-const newStartTime = "12:31";
+const newStartTime = "12:29";
 const newEndTime = "18:30";
 
 const validate = (sTime, eTime) => {
