@@ -1,10 +1,8 @@
 const arrayLength = (array, count = 0) => {
-  if (array[0] === undefined) {
+  if (array[count] == undefined) {
     return count;
   } else {
-    array.pop();
-    count++;
-    return arrayLength(array, count);
+    return arrayLength(array, ++count);
   }
 };
 
