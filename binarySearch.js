@@ -3,19 +3,20 @@ const sort = (arr) => {
 };
 
 const binarySearch = (array, low, high, searchnumber) => {
-
-  const mid = parseInt((low + high) / 2);
-
-  while (low <= high) {
+  if (low <= high) {
+    const mid = parseInt((low + high) / 2);
     if (array[mid] === searchnumber) {
       return mid;
     } else if (array[mid] > searchnumber) {
-      return binarySearch(array, low, mid + 1, searchnumber);
+      return binarySearch(array, low, mid - 1, searchnumber);
     } else {
       return binarySearch(array, mid + 1, high, searchnumber );
     }
+  } else {
+    return 'Not found'
   }
+
 };
 
 const array = sort([12, 24, 32, 45, 77]);
-console.log(binarySearch(array, 0, array.length, 32));
+console.log(binarySearch(array, 0, array.length, 10));
