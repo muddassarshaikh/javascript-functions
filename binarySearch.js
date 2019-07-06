@@ -19,4 +19,4 @@ const binarySearch = (array, low, high, searchnumber) => {
 };
 
 const array = sort([12, 24, 32, 45, 77]);
-console.log(binarySearch(array, 0, array.length, 10));
+console.log(binarySearch(array, 0, array.length, 12));
