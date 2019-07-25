@@ -1,4 +1,4 @@
-const sort = (arr) => {
+const sort = arr => {
   return arr.sort((a, b) => a - b);
 };
 
@@ -10,12 +10,11 @@ const binarySearch = (array, low, high, searchnumber) => {
     } else if (array[mid] > searchnumber) {
       return binarySearch(array, low, mid - 1, searchnumber);
     } else {
-      return binarySearch(array, mid + 1, high, searchnumber );
+      return binarySearch(array, mid + 1, high, searchnumber);
     }
   } else {
-    return 'Not found'
+    return 'Not found';
   }
-
 };
 
 const array = sort([12, 24, 32, 45, 77]);

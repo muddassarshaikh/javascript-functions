@@ -1,9 +1,9 @@
-const evenOdd = (number) => {
-  if(number % 2 === 0) {
+const evenOdd = number => {
+  if (number % 2 === 0) {
     return 'even';
   } else {
     return 'odd';
   }
 };
 
-console.log(evenOdd(3))
+console.log(evenOdd(3));
