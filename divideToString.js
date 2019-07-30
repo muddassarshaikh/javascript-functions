@@ -21,7 +21,6 @@ const divideStr = (str1, str2) => {
       }
     });
   });
-
-  return commonindex === 0 ? '""' : str1.substr(commonindex);
+  return commonindex === 0 || commonindex === str1.length ? '""' : str1.substr(commonindex);
 };
-console.log(divideStr('ABABAB', 'ABAB'));
+console.log(divideStr('ABCABC', 'ABC'));
