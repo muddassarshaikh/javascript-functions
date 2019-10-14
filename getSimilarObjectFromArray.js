@@ -101,19 +101,20 @@ const arr2 = [
 const checkSimilarObjectInArray = (a, b, checkBy) => {
   b = b.map(item => {
     for (let i = 0; i < a.length; i++) {
-      if (a[i][`${checkBy}`] === item[`${checkBy}`]) {
+      if (a[i].roleAccessPermission === item.roleAccessPermission) {
         let subMenus = [];
         if (a[i].subMenus && item.subMenus) {
           subMenus = item.subMenus.map(subMenusItem => {
             for (let j = 0; j < a[i].subMenus.length; j++) {
               if (a[i].subMenus[j][`${checkBy}`] === subMenusItem[`${checkBy}`]) {
+                Object.assign(a[i].subMenus[j], subMenusItem);
                 return a[i].subMenus[j];
               }
             }
           });
-          a[i].subMenus = subMenus;
+          Object.assign(item.subMenus, subMenus);
         }
-        return a[i];
+        return { ...a[i], ...item };
       }
     }
   });
