@@ -6,4 +6,4 @@ const evenOdd = number => {
   }
 };
 
-console.log(evenOdd(3));
+console.log(evenOdd(4));
