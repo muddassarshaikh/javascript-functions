@@ -1,4 +1,38 @@
 /**
+ * Bubble Sorting
+ */
+const bubbleSort = array => {
+  for (i = 1; i < array.length; i++) {
+    for (j = 0; j < i; j++) {
+      if (array[i] < array[j]) {
+        const temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
+      }
+    }
+  }
+  return array;
+};
+console.log(bubbleSort([12, 54, 23, 1, 67, 43, 2]));
+
+/**
+ * Insertion Sorting
+ */
+const insertionSort = array => {
+  for (i = 1; i < array.length; i++) {
+    let k = array[i];
+    let j = i - 1;
+    while (j >= 0 && array[j] > k) {
+      array[j + 1] = array[j];
+      j--;
+    }
+    array[j + 1] = k;
+  }
+  return array;
+};
+console.log(insertionSort([12, 54, 23, 1, 67, 43, 2]));
+
+/**
  * Title - Sort Numbers in Descending Order
  *
  * Description - Create a function that takes any nonnegative number as an argument
@@ -20,7 +54,4 @@ const sortDecending = num => {
       .join('')
   );
 };
-
-const num = 123;
-
-console.log(sortDecending(num));
+console.log(sortDecending(123));
