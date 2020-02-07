@@ -26,7 +26,7 @@ function getDate(time) {
 console.log(validate(newStartTime, newEndTime));
 
 /**
- * Adding two minutes in string format
+ * Adding two minutes in string format (HH:MM)
  */
 
 function addTimes(t0, t1) {
@@ -49,3 +49,28 @@ function timeToMins(time) {
 }
 
 console.log(addTimes(newStartTime, newEndTime));
+
+/**
+ * Converting the time from 12hr clock to 24hr clock
+ */
+
+function convertTime(time) {
+  const timeDivision = time.split(':');
+  const zone = timeDivision[2].substring(2, 4);
+
+  if (zone.toUpperCase() === 'PM') {
+    let hrs;
+    if (timeDivision[0] == '12') {
+      hrs = timeDivision[0];
+    } else {
+      hrs = +timeDivision[0] + 12;
+    }
+    return hrs + ':' + timeDivision[1] + ':' + timeDivision[2].substring(0, 2);
+  } else {
+    if (timeDivision[0] == '12') {
+      return '00:' + timeDivision[1] + ':' + timeDivision[2].substring(0, 2);
+    }
+    return timeDivision[0] + ':' + timeDivision[1] + ':' + timeDivision[2].substring(0, 2);
+  }
+}
+console.log(convertTime('07:05:45AM'));

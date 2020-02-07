@@ -8,7 +8,7 @@
       "type": "node",
       "request": "launch",
       "name": "Launch Program",
-      "program": "${workspaceFolder}/additionSinglyLinkList.js"
+      "program": "${workspaceFolder}/timeOperations.js"
     }
   ]
 }
