@@ -8,7 +8,7 @@
       "type": "node",
       "request": "launch",
       "name": "Launch Program",
-      "program": "${workspaceFolder}/timeOperations.js"
+      "program": "${workspaceFolder}/sillyGame1.js"
     }
   ]
 }
