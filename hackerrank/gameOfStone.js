@@ -92,7 +92,10 @@ const gameOfStones2 = n => {
   return 'First';
 };
 
-// const winner = gameOfStones(7);
+function gameOfStones3(input) {
+  return input % 7 <= 1 ? 'Second' : 'First';
+}
+
 console.log(gameOfStones(8));
-console.log(gameOfStones2(6));
-// console.log(winner % 2 === 0 ? 'Second' : 'First');
+console.log(gameOfStones2(22));
+console.log(gameOfStones3(22));
