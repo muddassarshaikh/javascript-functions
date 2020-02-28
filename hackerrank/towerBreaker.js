@@ -47,7 +47,6 @@
 
 function towerBreakers(n, number) {
   let count = 0;
-  let flag = 0;
   for (let i = 0; i < n; i++) {
     let num = number;
     let flag = 0;
