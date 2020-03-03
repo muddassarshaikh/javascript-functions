@@ -8,7 +8,7 @@
       "type": "node",
       "request": "launch",
       "name": "Launch Program",
-      "program": "${workspaceFolder}/hackerrank/BreakingRecords/breakingRecords.js"
+      "program": "${workspaceFolder}/hackerrank/divisibleSumPair/divisibleSumPair.js"
     }
   ]
 }
