@@ -1,0 +1,1 @@
+function sockMerchant(n, ar) {}
