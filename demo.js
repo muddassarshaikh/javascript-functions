@@ -1,15 +1,11 @@
-function printFarmInventory(cows, chickens) {
-  let cowString = String(cows);
-  while (cowString.length < 3) {
-    cowString = '0' + cowString;
-  }
-  console.log(`${cowString} Cows`);
-
-  let chickenString = String(chickens);
-  while (chickenString.length < 3) {
-    chickenString = '0' + chickenString;
-  }
-  console.log(`${chickenString} Chickens`);
+function noisy(f) {
+  return (...args) => {
+    console.log('calling with', args);
+    let result = f(...args);
+    console.log('called with', args, ', returned', result);
+    return result;
+  };
 }
-
-printFarmInventory(7, 11);
+noisy(Math.min)(3, 2, 1);
+// → calling with [3, 2, 1]
+// → called with [3, 2, 1] , returned 1

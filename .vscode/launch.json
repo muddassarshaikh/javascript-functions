@@ -8,7 +8,7 @@
       "type": "node",
       "request": "launch",
       "name": "Launch Program",
-      "program": "${workspaceFolder}/eloquent_javascript/chapter 3/recursion.js"
+      "program": "${workspaceFolder}/demo.js"
     }
   ]
 }
