@@ -15,7 +15,7 @@
  * @return {number[]}
  */
 
-const twoSumMethod1 = function(nums, target) {
+const twoSumMethod1 = function (nums, target) {
   for (let i = 0; i < nums.length; i++) {
     for (let j = 0; j < nums.length; i++) {
       if (i !== j && nums[i] + nums[j] === target) {
@@ -26,7 +26,7 @@ const twoSumMethod1 = function(nums, target) {
   return null;
 };
 
-const twoSumMethod2 = function(nums, target) {
+const twoSumMethod2 = function (nums, target) {
   for (let i = 0; i < nums.length; i++) {
     const remainingvalue = target - nums[i];
     const indexOf = nums.indexOf(remainingvalue);
@@ -37,7 +37,7 @@ const twoSumMethod2 = function(nums, target) {
   return null;
 };
 
-const twoSumMethod3 = function(nums, target) {
+const twoSumMethod3 = function (nums, target) {
   const comp = {};
   for (let i = 0; i < nums.length; i++) {
     if (comp[nums[i]] >= 0) {
@@ -47,4 +47,4 @@ const twoSumMethod3 = function(nums, target) {
   }
 };
 
-console.log('TCL: twoSum', twoSumMethod1([2, 7, 11, 15, 5], 9));
+console.log('TCL: twoSum', twoSumMethod3([2, 7, 11, 15, 5], 9));
