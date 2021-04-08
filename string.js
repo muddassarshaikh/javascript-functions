@@ -24,8 +24,8 @@ const verifySubstrs = (mainStr, head, body, tail) => {
 };
 
 const mainStr = 'Onomatopeia';
-const head = 'on';
-const body = 'mato';
+const head = 'On';
+const body = 'matope';
 const tail = 'ia';
 console.log(verifySubstrs(mainStr, head, body, tail));
 
@@ -51,7 +51,7 @@ console.log(verifySubstrs(mainStr, head, body, tail));
  *         Must be case insensitive.
  */
 
-const XO = str => {
+const XO = (str) => {
   return str.toLowerCase().split('x').length == str.split('o').length;
 };
 
@@ -76,13 +76,7 @@ console.log(XO(str));
  */
 
 function isSymmetrical(num) {
-  return (
-    num
-      .toString()
-      .split('')
-      .reverse()
-      .join('') == num
-  );
+  return num.toString().split('').reverse().join('') == num;
 }
 
 const num = 'ooxxx';
@@ -105,17 +99,17 @@ console.log(isSymmetrical(num));
  *        'e's with 3, 'i's with 1, 'o's with 0, and 's's with 5.
  */
 
-const hackerSpeak = str => {
+const hackerSpeak = (str) => {
   const replaceObj = {
     a: 4,
     e: 3,
     i: 1,
     o: 0,
-    s: 5
+    s: 5,
   };
   const regex = /[aeios]/g;
 
-  return str.replace(regex, match => {
+  return str.replace(regex, (match) => {
     return replaceObj[match];
   });
 };
@@ -140,8 +134,8 @@ console.log(hackerSpeak(string));
  *        Notice in the second example above, "MABELLE" is returned as "Mabelle".
  */
 
-const capMe = arr => {
-  return arr.map(ele => ele.charAt(0).toUpperCase() + ele.substr(1).toLowerCase());
+const capMe = (arr) => {
+  return arr.map((ele) => ele.charAt(0).toUpperCase() + ele.substr(1).toLowerCase());
 };
 
 const arr = ['mavis', 'senaida', 'letty'];
@@ -162,7 +156,7 @@ console.log(capMe(arr));
  *           "D0n$c sed 0di0 du1" ➞ "D0nc sed 0di0 du1"
  */
 
-const removeSpecialCharacters = str => {
+const removeSpecialCharacters = (str) => {
   return str.replace(/[^a-zA-Z0-9-_ ]/g, '');
 };
 
@@ -288,7 +282,7 @@ console.log(validatePIN('1234'));
 function makeTitle(str) {
   return str
     .split(' ')
-    .map(x => x.charAt(0).toUpperCase() + x.substring(1))
+    .map((x) => x.charAt(0).toUpperCase() + x.substring(1))
     .join(' ');
 }
 
@@ -314,14 +308,7 @@ console.log(makeTitle('capitalize every word'));
 function reverse(str) {
   return str
     .split(' ')
-    .map(x =>
-      x.length > 4
-        ? x
-            .split('')
-            .reverse()
-            .join('')
-        : x
-    )
+    .map((x) => (x.length > 4 ? x.split('').reverse().join('') : x))
     .join(' ');
 }
 

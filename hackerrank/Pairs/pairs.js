@@ -17,7 +17,6 @@ function pairs1(k, arr) {
   let j = 0;
 
   arr.sort((a, b) => a - b);
-  console.log('🚀 ~ file: pairs.js ~ line 15 ~ pairs1 ~ arr', arr);
 
   while (i < arr.length && j < arr.length) {
     if (arr[j] - arr[i] === k) {
