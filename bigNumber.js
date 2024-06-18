@@ -43,7 +43,7 @@ function addZeroToString(str1, str2) {
   return str2;
 }
 
-function addTwoBugNumbers(a, b) {
+function addTwoBigNumbers(a, b) {
   if (a.length > b.length) {
     b = addZeroToString(a, b);
   } else {
@@ -70,5 +70,5 @@ function addTwoBugNumbers(a, b) {
 
 console.log(
   "🚀 ~ file: bigNumber.js ~ line 72 ~ addTwoBugNumbers('12312312312312312312312312312312123', '1')",
-  addTwoBugNumbers('12312312312312312312312312312312123', '1')
+  addTwoBigNumbers('12312312312312312312312312312312123', '1')
 );
