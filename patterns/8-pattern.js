@@ -1,7 +1,7 @@
 // 8.      *
-//       * * * 
+//       * * *
 //     * * * * *
-//   * * * * * * * 
+//   * * * * * * *
 //  * * * * * * * * *
 
 function pattern(num) {
@@ -14,7 +14,7 @@ function pattern(num) {
     for (let k = 0; k < 2 * i + 1; k++) {
       str += '* ';
     }
-    
+
     console.log(str);
   }
 }

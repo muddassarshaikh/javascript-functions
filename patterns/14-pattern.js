@@ -14,7 +14,7 @@ function pattern(num) {
     }
 
     for (let k = 0; k < 2 * (num - i) - 1; k++) {
-      if(i===0 || k===0 || k === 2*(num - i) -2) {
+      if (i === 0 || k === 0 || k === 2 * (num - i) - 2) {
         str += '*';
       } else {
         str += ' ';

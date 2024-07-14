@@ -14,7 +14,7 @@ function pattern(num) {
     for (let k = 0; k < num - i; k++) {
       str += '* ';
     }
-    
+
     console.log(str);
   }
 }
