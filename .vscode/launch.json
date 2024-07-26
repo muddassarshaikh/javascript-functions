@@ -8,7 +8,7 @@
       "type": "node",
       "request": "launch",
       "name": "Launch Program",
-      "program": "${workspaceFolder}/hackerrank/BetweenTwoSets/betweenTwoSets.js"
+      "program": "${workspaceFolder}/patterns/31-pattern.js"
     }
   ]
 }
