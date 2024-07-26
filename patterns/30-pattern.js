@@ -13,7 +13,7 @@ function pattern(n) {
     }
 
     for (let j = i; j >= 0; j--) {
-      str += `${j+1} `;
+      str += `${j + 1} `;
     }
 
     for (let j = 1; j <= i; j++) {
